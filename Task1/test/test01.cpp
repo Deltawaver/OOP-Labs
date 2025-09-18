@@ -30,5 +30,8 @@ TEST(CheckerTest, SymbolsCheck_Decimal_ValidChars_ReturnsFalse) {
 TEST(CheckerTest, IsClear_PureNumber_OutputsCorrect1) {
     EXPECT_TRUE(is_clear("54F432"));    
     EXPECT_TRUE(is_clear("AA998E"));   
-    EXPECT_FALSE(is_clear("3320"));
+    EXPECT_TRUE(is_clear("3320"));
+    EXPECT_FALSE(is_clear("1234"));
+    EXPECT_FALSE(is_clear("567F"));
+    EXPECT_FALSE(is_clear("ABCDEF"));
 }

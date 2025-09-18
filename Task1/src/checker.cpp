@@ -35,8 +35,7 @@ bool symbols_check(const std::string& text, int base){
 
 bool is_clear(const std::string& text){
     for (size_t i = 0; i < text.size() - 1; i++) {
-        if (std::toupper(text[i]) < std::toupper(text[i + 1])) {
-            std::cout << "Число не чистое" << std::endl;
+        if (std::toupper(text[i]) > std::toupper(text[i + 1])) {
             return true;
         }
     }
